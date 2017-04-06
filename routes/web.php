@@ -14,6 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/example', function () {
-    return view('links');
-});
+Route::get('/vuelo/{id?}','VueloController@index')->where('id', '[0,9]+'  );
