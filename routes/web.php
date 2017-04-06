@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/vuelo/{id?}','VueloController@index')->where('id', '[0,9]+'  );
+Route::get('vuelo/{id?}','VueloController@index')->where('id', '[0-9]+');

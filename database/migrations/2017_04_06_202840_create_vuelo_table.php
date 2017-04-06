@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -14,10 +13,10 @@ class CreateVueloTable extends Migration
      */
     public function up()
     {
-        Schema::create('Vuelo', function (Blueprint $table) {
+        Schema::create('vuelo', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->Integer('sits');
+            $table->integer('sits');
             $table->string('cities');
             
         });
@@ -30,6 +29,6 @@ class CreateVueloTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Vuelo');
+        Schema::dropIfExists('vuelo');
     }
 }
